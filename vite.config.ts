@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 
 export default defineConfig({
+  base: '/website-2025/',
   plugins: [react(), imagetools()],
   resolve: {
     alias: {
@@ -14,6 +15,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
+    outDir: 'dist',
     rollupOptions: {
       output: {
         manualChunks: {
