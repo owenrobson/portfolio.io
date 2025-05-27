@@ -46,11 +46,18 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-email', {
-        body: values
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(values),
       });
 
-      if (error) throw error;
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
 
       form.reset();
       toast({
