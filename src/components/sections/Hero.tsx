@@ -25,7 +25,8 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <span className="text-primary">Front End Developer</span> & UI Designer
+            <span className="text-primary">Owen Robson</span>
+            <p>Front End Developer</p>
           </h1>
 
           <p
@@ -41,14 +42,18 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <Button size="lg" className="group">
-              View My Work
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="outline">
-              <User className="mr-2 h-4 w-4" />
-              About Me
-            </Button>
+            <a href="#agency-projects">
+              <Button size="lg" className="group">
+                View My Work
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
+            <a href="#about">
+              <Button size="lg" variant="outline">
+                <User className="mr-2 h-4 w-4" />
+                About Me
+              </Button>
+            </a>
           </div>
         </div>
       </div>

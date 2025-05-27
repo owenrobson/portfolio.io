@@ -1,8 +1,8 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-muted/50 py-12 mt-24">
       <div className="container">
@@ -13,7 +13,7 @@ const Footer = () => {
               Crafting exceptional digital experiences through innovative design and development.
             </p>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -23,7 +23,7 @@ const Footer = () => {
               <li><a href="#individual-projects" className="text-muted-foreground hover:text-primary transition-colors">Individual Projects</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4 mb-4">
@@ -36,10 +36,6 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
                 <span className="sr-only">Email</span>
               </a>
@@ -47,7 +43,7 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">contact@portfolio.com</p>
           </div>
         </div>
-        
+
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">
           <p>© {currentYear} Portfolio. All rights reserved.</p>
         </div>

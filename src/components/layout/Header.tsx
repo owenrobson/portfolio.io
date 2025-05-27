@@ -49,7 +49,7 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between">
         <a href="#home" className="font-bold text-xl">
-          Portfolio<span className="text-primary">.</span>
+          Web Dev Portfolio by Owen Robson<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Navigation */}

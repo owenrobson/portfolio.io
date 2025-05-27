@@ -26,7 +26,7 @@ export const projects: Project[] = [
     type: 'agency',
     image: eis,
     technologies: ['React', 'Tailwind', 'Vite', 'ShadCn', 'Laravel', 'InertiaJS', 'SQL', 'AWS'],
-    link: 'https://example.com',
+    link: 'https://www.events-insurance.co.uk/',
     featured: true,
     date: 'Dec 2024'
   },
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     type: 'agency',
     image: monkeyshoulder,
     technologies: ['React', 'Next.js', 'Tailwind', 'Laravel'],
-    link: 'https://example.com',
+    link: 'https://www.monkeyshoulder.com/en-gb',
     date: 'November 2024'
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     type: 'agency',
     image: canadianaffair,
     technologies: ['React', 'Next.js', 'Tailwind', 'Laravel', 'AWS'],
-    link: 'https://example.com',
+    link: 'https://www.canadianaffair.com/',
     date: 'February 2025'
   },
   {
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     type: 'agency',
     image: tektura,
     technologies: ['React', 'Tailwind', 'Laravel', 'AWS'],
-    link: 'https://example.com',
+    link: 'https://www.tektura.com/',
     date: 'April 2025'
   },
 

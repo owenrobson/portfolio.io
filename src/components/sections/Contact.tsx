@@ -31,7 +31,7 @@ const formSchema = z.object({
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,20 +41,37 @@ const Contact = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       form.reset();
-      
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
-    }, 1500);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -66,16 +83,16 @@ const Contact = () => {
             Have a project in mind or want to explore collaboration opportunities? I'd love to hear from you.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div className="space-y-6">
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold">Contact Information</h3>
               <p className="text-muted-foreground">
-                Feel free to reach out through the form or directly via email or phone.
+                Feel free to reach out through the form or directly via email.
               </p>
             </div>
-            
+
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="bg-primary/10 p-2 rounded-full text-primary">
@@ -83,10 +100,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">contact@portfolio.com</p>
+                  <p className="font-medium">owen.robson13@hotmail.co.uk</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <div className="bg-primary/10 p-2 rounded-full text-primary">
                   <MessageSquare className="h-5 w-5" />
@@ -94,23 +111,18 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-muted-foreground">Social</p>
                   <div className="flex gap-2">
-                    <a href="#" className="font-medium hover:text-primary transition-colors">Twitter</a>
-                    <span>•</span>
                     <a href="#" className="font-medium hover:text-primary transition-colors">LinkedIn</a>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-muted/30 p-6 rounded-lg border border-border/50">
               <h4 className="font-medium mb-2">Project Inquiry</h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Looking for a website, application, or design project? Provide details about your needs for a faster response.
-              </p>
               <Button variant="link" className="p-0 h-auto text-primary">View my work availability →</Button>
             </div>
           </div>
-          
+
           <div>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -130,7 +142,7 @@ const Contact = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -147,7 +159,7 @@ const Contact = () => {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -155,17 +167,17 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Tell me about your project..." 
+                        <Textarea
+                          placeholder="Tell me about your project..."
                           className="resize-none min-h-[120px]"
-                          {...field} 
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                
+
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>Sending...</>
