@@ -15,7 +15,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MessageSquare, Send, User } from 'lucide-react';
-import supabase from '@/lib/supabase';
+
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -89,9 +89,6 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold">Contact Information</h3>
-              <p className="text-muted-foreground">
-                Feel free to reach out through the form or directly via email.
-              </p>
             </div>
 
             <div className="space-y-4">
@@ -116,11 +113,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-muted/30 p-6 rounded-lg border border-border/50">
-              <h4 className="font-medium mb-2">Project Inquiry</h4>
-              <Button variant="link" className="p-0 h-auto text-primary">View my work availability →</Button>
             </div>
           </div>
 
