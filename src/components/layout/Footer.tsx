@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Portfolio<span className="text-primary">.</span></h3>
+            <h3 className="text-xl font-bold mb-4">Web Dev Portfolio by Owen Robson<span className="text-primary">.</span></h3>
             <p className="text-muted-foreground max-w-xs">
               Crafting exceptional digital experiences through innovative design and development.
             </p>
@@ -27,25 +27,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4 mb-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/owenrobson" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/owen-robson/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail size={20} />
-                <span className="sr-only">Email</span>
               </a>
             </div>
             <p className="text-muted-foreground text-sm">contact@portfolio.com</p>
           </div>
-        </div>
-
-        <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">
-          <p>© {currentYear} Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>

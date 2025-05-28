@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 export default defineConfig({
-    base: '',
+    base: '/portfolio.io',
     plugins: [react(), imagetools()],
     resolve: {
         alias: {
