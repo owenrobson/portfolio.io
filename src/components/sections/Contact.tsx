@@ -80,9 +80,6 @@ const Contact = () => {
       <div className="container">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight mb-2">Get In Touch</h2>
-          <p className="text-muted-foreground">
-            Have a project in mind or want to explore collaboration opportunities? I'd love to hear from you.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">

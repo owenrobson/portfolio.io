@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import { imagetools } from 'vite-imagetools';
 
 export default defineConfig({
-  base: '/owenrobsonportfolio.io',
+  base: '/portfolio.io',
   plugins: [react(), imagetools()],
   resolve: {
     alias: {
