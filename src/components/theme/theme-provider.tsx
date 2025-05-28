@@ -26,7 +26,6 @@ export function ThemeProvider({
   defaultTheme = "dark",
   storageKey = "vite-ui-theme",
   disableSwitch = false,
-  ...props
 }: ThemeProviderProps) {
   useEffect(() => {
     const root = window.document.documentElement;
@@ -34,13 +33,13 @@ export function ThemeProvider({
     root.classList.add("dark");
   }, []);
 
-  const value = {
+  const value: ThemeProviderState = {
     theme: "dark",
     setTheme: () => null,
   };
 
   return (
-    <ThemeProviderContext.Provider {...props} value={value}>
+    <ThemeProviderContext.Provider value={value}>
       {children}
     </ThemeProviderContext.Provider>
   );
