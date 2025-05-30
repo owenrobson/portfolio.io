@@ -16,6 +16,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MessageSquare, Send, User } from 'lucide-react';
 
+
 const formSchema = z.object({
   name: z.string().min(2, {
     message: 'Name must be at least 2 characters.',
@@ -45,10 +46,11 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
         },
         body: JSON.stringify(values),
       });
@@ -75,17 +77,16 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight mb-2">Get In Touch</h2>
+          <p className="text-muted-foreground">
+            Have a project in mind or want to explore collaboration opportunities? I look forward to hearing from you!
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="flex flex-col justify-center gap-12 max-w-4xl mx-auto items-center">
           <div className="space-y-6">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-xl font-semibold">Contact Information</h3>
-            </div>
-
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="bg-primary/10 p-2 rounded-full text-primary">
@@ -93,7 +94,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">owen.robson13@hotmail.co.uk</p>
+                  <a href="mailto:owen.robson13@hotmail.co.uk" className="font-medium hover:underline">
+                    owen.robson13@hotmail.co.uk
+                  </a>
                 </div>
               </div>
 
@@ -109,75 +112,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                          <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                          <Input placeholder="Your name" className="pl-10" {...field} />
-                        </div>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                          <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                          <Input placeholder="Your email" className="pl-10" {...field} />
-                        </div>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Tell me about your project..."
-                          className="resize-none min-h-[120px]"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>Sending...</>
-                  ) : (
-                    <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            </Form>
           </div>
         </div>
       </div>

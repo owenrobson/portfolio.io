@@ -2,6 +2,7 @@ import eis from '@/components/images/eis.png';
 import monkeyshoulder from '@/components/images/monkeyshoulder.png';
 import canadianaffair from '@/components/images/canadianaffair.png';
 import tektura from '@/components/images/tektura.png';
+import personalab from '@/components/images/personalab.png';
 
 
 export interface Project {
@@ -64,47 +65,47 @@ export const projects: Project[] = [
   // Individual Projects
   {
     id: 'individual-1',
-    title: 'Task Management App',
-    description: 'A productivity application for managing tasks, projects, and deadlines with a focus on minimalist design and keyboard shortcuts for power users.',
+    title: 'PersonaLab',
+    description: 'An idea for a AI tool that builds detailed buyer personas from web traffic, CRM data, or survey results using clustering and natural language insights.',
     type: 'individual',
-    image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'Redux', 'Firebase', 'Framer Motion', 'PWA'],
+    image: personalab,
+    technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
     link: 'https://example.com',
     github: 'https://github.com',
     featured: true,
     date: 'April 2023'
   },
-  {
-    id: 'individual-2',
-    title: 'Weather Visualization Dashboard',
-    description: 'Interactive weather dashboard that displays current and historical weather data with beautiful visualizations and location-based forecasting.',
-    type: 'individual',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Netlify', 'PWA'],
-    link: 'https://example.com',
-    github: 'https://github.com',
-    date: 'January 2023'
-  },
-  {
-    id: 'individual-3',
-    title: 'Markdown Note Taking App',
-    description: 'A minimalist markdown editor with cloud sync, dark mode, and tag-based organization. Built as a PWA for offline functionality.',
-    type: 'individual',
-    image: 'https://images.pexels.com/photos/4068291/pexels-photo-4068291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'IndexedDB', 'Firebase', 'Marked.js', 'Workbox'],
-    link: 'https://example.com',
-    github: 'https://github.com',
-    date: 'October 2022'
-  },
-  {
-    id: 'individual-4',
-    title: 'Personal Finance Tracker',
-    description: 'An application to track personal finances, visualize spending patterns, and set budgeting goals with expense categorization.',
-    type: 'individual',
-    image: 'https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'Chart.js', 'Supabase', 'TailwindCSS', 'Vite'],
-    link: 'https://example.com',
-    github: 'https://github.com',
-    date: 'July 2022'
-  }
+  // {
+  //   id: 'individual-2',
+  //   title: 'Weather Visualization Dashboard',
+  //   description: 'Interactive weather dashboard that displays current and historical weather data with beautiful visualizations and location-based forecasting.',
+  //   type: 'individual',
+  //   image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  //   technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Netlify', 'PWA'],
+  //   link: 'https://example.com',
+  //   github: 'https://github.com',
+  //   date: 'January 2023'
+  // },
+  // {
+  //   id: 'individual-3',
+  //   title: 'Markdown Note Taking App',
+  //   description: 'A minimalist markdown editor with cloud sync, dark mode, and tag-based organization. Built as a PWA for offline functionality.',
+  //   type: 'individual',
+  //   image: 'https://images.pexels.com/photos/4068291/pexels-photo-4068291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  //   technologies: ['React', 'IndexedDB', 'Firebase', 'Marked.js', 'Workbox'],
+  //   link: 'https://example.com',
+  //   github: 'https://github.com',
+  //   date: 'October 2022'
+  // },
+  // {
+  //   id: 'individual-4',
+  //   title: 'Personal Finance Tracker',
+  //   description: 'An application to track personal finances, visualize spending patterns, and set budgeting goals with expense categorization.',
+  //   type: 'individual',
+  //   image: 'https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+  //   technologies: ['React', 'Chart.js', 'Supabase', 'TailwindCSS', 'Vite'],
+  //   link: 'https://example.com',
+  //   github: 'https://github.com',
+  //   date: 'July 2022'
+  // }
 ];
