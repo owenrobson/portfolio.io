@@ -36,7 +36,6 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
             </div>
-            <p className="text-muted-foreground text-sm">contact@portfolio.com</p>
           </div>
         </div>
       </div>
