@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://owenrobson.github.io/portfolio.io/",
+  "homepage": "https://owenrobson.github.io/portfolio.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/owenrobson/portfolio.io.git"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
