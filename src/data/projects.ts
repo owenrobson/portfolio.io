@@ -82,7 +82,7 @@ export const projects: Project[] = [
     description: 'I created a shopify website by taking an existing theme, and customising it using Shopify Liquid; a template language created by Shopify to dynamically generate content on their e-commerce platform..',
     type: 'individual',
     image: sit,
-    technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Netlify', 'PWA'],
+    technologies: ['Shopify', 'Liquid', 'HTML', 'Javascript', 'CSS',],
     link: 'https://studio-sit.myshopify.com/',
     date: 'July 2025'
   },
