@@ -2,7 +2,9 @@ import eis from '@/components/images/eis.png';
 import monkeyshoulder from '@/components/images/monkeyshoulder.png';
 import canadianaffair from '@/components/images/canadianaffair.png';
 import tektura from '@/components/images/tektura.png';
-import personalab from '@/components/images/personalab.png';
+import synergy from '@/components/images/synergy.png';
+import sit from '@/components/images/sit.png';
+
 
 
 export interface Project {
@@ -65,27 +67,26 @@ export const projects: Project[] = [
   // Individual Projects
   {
     id: 'individual-1',
-    title: 'PersonaLab',
-    description: 'An idea for a AI tool that builds detailed buyer personas from web traffic, CRM data, or survey results using clustering and natural language insights.',
+    title: 'Synergy Dental Lab',
+    description: 'A homepage moclup I created for a dental lab, showcasing their services and expertise. The design focuses on user-friendly navigation and a clean aesthetic to highlight the lab\'s offerings. I am hoping to hear back from them and complete the site soon',
     type: 'individual',
-    image: personalab,
+    image: synergy,
     technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
     link: 'https://example.com',
     github: 'https://github.com',
     featured: true,
-    date: 'April 2023'
+    date: 'June 2025'
   },
-  // {
-  //   id: 'individual-2',
-  //   title: 'Weather Visualization Dashboard',
-  //   description: 'Interactive weather dashboard that displays current and historical weather data with beautiful visualizations and location-based forecasting.',
-  //   type: 'individual',
-  //   image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  //   technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Netlify', 'PWA'],
-  //   link: 'https://example.com',
-  //   github: 'https://github.com',
-  //   date: 'January 2023'
-  // },
+  {
+    id: 'individual-2',
+    title: 'Studio Sit (password: test)',
+    description: 'I created a shopify website by taking an existing theme, and customising it using Shopify Liquid; a template language created by Shopify to dynamically generate content on their e-commerce platform..',
+    type: 'individual',
+    image: sit,
+    technologies: ['Vue.js', 'D3.js', 'OpenWeather API', 'Netlify', 'PWA'],
+    link: 'https://studio-sit.myshopify.com/',
+    date: 'July 2025'
+  },
   // {
   //   id: 'individual-3',
   //   title: 'Markdown Note Taking App',
