@@ -72,8 +72,7 @@ export const projects: Project[] = [
     type: 'individual',
     image: synergy,
     technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
-    link: 'https://example.com',
-    github: 'https://github.com',
+    link: 'https://owenrobson.github.io/synergydentallab/',
     featured: true,
     date: 'June 2025'
   },
