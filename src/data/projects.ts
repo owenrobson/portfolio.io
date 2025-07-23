@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     id: 'individual-1',
     title: 'Synergy Dental Lab',
-    description: 'A homepage moclup I created for a dental lab, showcasing their services and expertise. The design focuses on user-friendly navigation and a clean aesthetic to highlight the lab\'s offerings. I am hoping to hear back from them and complete the site soon',
+    description: 'A homepage mockup I created for a dental lab, showcasing their services and expertise. The design focuses on user-friendly navigation and a clean aesthetic to highlight the lab\'s offerings. I am hoping to hear back from them and complete the site soon',
     type: 'individual',
     image: synergy,
     technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
