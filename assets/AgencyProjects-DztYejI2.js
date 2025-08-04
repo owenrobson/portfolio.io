@@ -1,4 +1,4 @@
-import{j as e}from"./ui-vendor-CEZI7tp1.js";import{p as d,P as r}from"./projects-lEtxZ18O.js";import{c}from"./index-Bqpt9S6L.js";import"./react-vendor-BtP0CW_r.js";/**
+import{j as e}from"./ui-vendor-CEZI7tp1.js";import{p as d,P as r}from"./projects-DEtk2F6S.js";import{c}from"./index-B84nKi1j.js";import"./react-vendor-BtP0CW_r.js";/**
  * @license lucide-react v0.446.0 - ISC
  *
  * This source code is licensed under the ISC license.
