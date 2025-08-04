@@ -34,8 +34,7 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            I build responsive, high-performance web interfaces using React and modern front-end technologies. My focus is on creating engaging, accessible, and user-centric digital experiences that drive results.
-          </p>
+            I design responsive, high-performing HTML emails and templates with a strong foundation in web development. Leveraging modern front-end principles, I create visually engaging, accessible, and conversion-driven email experiences that align with brand goalss.          </p>
 
           <div
             className="flex flex-col sm:flex-row gap-4 mt-4 justify-center"

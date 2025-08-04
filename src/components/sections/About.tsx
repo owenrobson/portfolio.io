@@ -31,7 +31,7 @@ const About = () => {
 
             <div className="space-y-4">
               <p>
-                I’m a front-end developer with two years of experience building responsive and visually engaging websites. Having completed a BCS Level 4 Software Development apprenticeship, I am now focused on further enhancing my front-end development skills and deepening my expertise in modern web technologies.
+                I have two years of experience building responsive and visually engaging websites. Having completed a BCS Level 4 Software Development apprenticeship, I am now applying my UX and front-end development skills to create dynamic marketing emails.
               </p>
               <p>
                 I’ve worked in both agency environments and on solo projects, helping businesses elevate their digital presence. With a strong foundation in modern web technologies and a keen eye for design, I focus on crafting user-friendly experiences that are as effective as they are beautiful.
