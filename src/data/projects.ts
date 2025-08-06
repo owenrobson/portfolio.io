@@ -86,7 +86,7 @@ export const projects: Project[] = [
     image: revolut,
     technologies: ['Figma', 'Klaviyo', 'Netlify'],
     link: 'https://revolutultra.netlify.app/',
-    date: 'August 2025'
+    date: 'August 2025',
   },
   // {
   //   id: 'individual-3',

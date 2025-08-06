@@ -11,11 +11,26 @@ interface ProjectCardProps {
 export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) {
   const isFeatured = variant === 'featured';
 
+  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Don't trigger card click if user clicks on a link or SVG inside a link
+    const target = e.target as HTMLElement;
+    if (target.closest('a')) return;
+
+    if (project.link) {
+      window.open(project.link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <Card className={`overflow-hidden group border-border/50 ${isFeatured ? 'lg:grid lg:grid-cols-2 gap-8' : ''
-      }`}>
-      <div className={`relative overflow-hidden ${isFeatured ? 'aspect-[16/9]' : 'aspect-[16/10]'
-        }`}>
+    <Card
+      onClick={handleCardClick}
+      className={`overflow-hidden group border-border/50 cursor-pointer hover:shadow-lg transition-shadow duration-300 ${isFeatured ? 'lg:grid lg:grid-cols-2 gap-8' : ''
+        }`}
+    >
+      <div
+        className={`relative overflow-hidden ${isFeatured ? 'aspect-[16/9]' : 'aspect-[16/10]'
+          }`}
+      >
         <img
           src={project.image}
           alt={project.title}
