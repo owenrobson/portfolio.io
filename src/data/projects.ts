@@ -2,9 +2,10 @@ import eis from '@/components/images/eis.png';
 import monkeyshoulder from '@/components/images/monkeyshoulder.png';
 import canadianaffair from '@/components/images/canadianaffair.png';
 import tektura from '@/components/images/tektura.png';
-import synergy from '@/components/images/synergy.png';
-import sit from '@/components/images/sit.png';
+// import synergy from '@/components/images/synergy.png';
+// import sit from '@/components/images/sit.png';
 import UNIQLO from '@/components/images/UNIQLO.png';
+import revolut from '@/components/images/revolut.png';
 
 
 
@@ -77,35 +78,35 @@ export const projects: Project[] = [
     link: 'https://owenrobson.github.io/HTML-Email/',
     date: 'July 2025'
   },
+  {
+    id: 'individual-2',
+    title: 'Concept Revolut Email',
+    description: 'A concept emaail design for Revolut, focusing on modern design principles and best practices for responsive and accessible HTML emails. The email was made in Klaviyo, a popular email marketing platform.',
+    type: 'individual',
+    image: revolut,
+    technologies: ['Figma', 'Klaviyo', 'Netlify'],
+    link: 'https://revolutultra.netlify.app/',
+    date: 'August 2025'
+  },
   // {
-  //   id: 'individual-2',
-  //   title: 'Personal Finance Tracker',
-  //   description: 'An application to track personal finances, visualize spending patterns, and set budgeting goals with expense categorization.',
+  //   id: 'individual-3',
+  //   title: 'Synergy Dental Lab',
+  //   description: 'A homepage mockup I created for a dental lab, showcasing their services and expertise. The design focuses on user-friendly navigation and a clean aesthetic to highlight the lab\'s offerings. I am hoping to hear back from them and complete the site soon',
   //   type: 'individual',
-  //   image: 'https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  //   technologies: ['React', 'Chart.js', 'Supabase', 'TailwindCSS', 'Vite'],
-  //   link: 'https://example.com',
-  //   date: 'July 2022'
+  //   image: synergy,
+  //   technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
+  //   link: 'https://owenrobson.github.io/synergydentallab/',
+  //   featured: false,
+  //   date: 'June 2025'
   // },
-  {
-    id: 'individual-3',
-    title: 'Synergy Dental Lab',
-    description: 'A homepage mockup I created for a dental lab, showcasing their services and expertise. The design focuses on user-friendly navigation and a clean aesthetic to highlight the lab\'s offerings. I am hoping to hear back from them and complete the site soon',
-    type: 'individual',
-    image: synergy,
-    technologies: ['React', 'Tailwind', 'Vite', 'Typescript', 'openai'],
-    link: 'https://owenrobson.github.io/synergydentallab/',
-    featured: false,
-    date: 'June 2025'
-  },
-  {
-    id: 'individual-4',
-    title: 'Studio Sit (password: test)',
-    description: 'I created a shopify website by taking an existing theme, and customising it using Shopify Liquid; a template language created by Shopify to dynamically generate content on their e-commerce platform..',
-    type: 'individual',
-    image: sit,
-    technologies: ['Shopify', 'Liquid', 'HTML', 'Javascript', 'CSS',],
-    link: 'https://studio-sit.myshopify.com/',
-    date: 'July 2025'
-  },
+  // {
+  //   id: 'individual-4',
+  //   title: 'Studio Sit (password: test)',
+  //   description: 'I created a shopify website by taking an existing theme, and customising it using Shopify Liquid; a template language created by Shopify to dynamically generate content on their e-commerce platform..',
+  //   type: 'individual',
+  //   image: sit,
+  //   technologies: ['Shopify', 'Liquid', 'HTML', 'Javascript', 'CSS',],
+  //   link: 'https://studio-sit.myshopify.com/',
+  //   date: 'July 2025'
+  // },
 ];
